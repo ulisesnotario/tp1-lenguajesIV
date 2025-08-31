@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TP1 – Carga y previsualización de imagen (File API)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card" aria-labelledby="titulo">
+      <h1 id="titulo">TP1 – Lenguaje IV</h1>
+      <p class="sub">Subir una imagen con <strong>File API</strong>, validarla y mostrarla en el documento.</p>
+
+      <div class="input-row">
+        <label class="file-label" for="fileInput" title="Elegir archivo (solo imágenes)">
+          📷 <span>Elegir imagen…</span>
+        </label>
+        <input id="fileInput" class="file-input" type="file" accept="image/*" />
+        <button id="clearBtn" class="btn-clear" disabled>Limpiar</button>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite">
+        Aún no se seleccionó ningún archivo.
+      </div>
+
+      <div id="dropzone" class="dropzone" tabindex="0" aria-label="Soltar archivo aquí para subir">O soltá tu imagen aquí (drag & drop)</div>
+
+      <div id="preview" class="preview" hidden></div>
+
+      <footer>
+        <p>Validación realizada en el cliente usando la <em>File API</em> y <code>FileReader</code>. No se sube nada al servidor.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
